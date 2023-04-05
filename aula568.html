@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 568</title>
+    <style>
+        h1 {
+            background: blue;
+        }
+
+        /*"{}" é usado sempre que se chama uma tag para identificar o estilo da mesma, aqui a linguagem de programação é CSS mesmo o documento sendo HTML*/
+
+        #heading {
+            background: purple;
+        }
+
+        /*Para selecionar ids é usado "#" seguido do nome do id*/
+
+        .fundo-vermelho {
+            background: red;
+        }
+
+        /*Para selecionar calss é usado "." seguido do nome da class*/
+    </style><!--usado para colocar o CSS dentro do HTML, os ids e class são colocados aqui-->
+</head>
+
+<body>
+    <h1 id="heading"><!--"id" é o identificador da tag, duas tags não podem ter o mesmo id-->
+        Olá Mundo!
+    </h1>
+    <h1 class="fundo-vermelho borda-esquerda">
+        <!--"class" é semelhante ao id, mas a mesma class pode ser usada em varias tags e a mesma tag pode ter mais de uma class, para isso escrever as class dentro das mesmas aspas-->
+        Adeus Mundo!
+
+
+    </h1>
+    <h1>
+        <b>Não foi um Adeus!</b><!--"b" bold ou negrito-->
+    </h1>
+</body>
+
+</html>
+<!--ids e class são uteis para serem usados em conjunto com CSS e JavaScript, id tem prioridade sobre class, umas das formas de subescrever um id é usar "!important" em CSS(não recomendado)-->

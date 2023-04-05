@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 570</title>
+    <style>
+        .azul {
+            font-size: 24px;
+            color: blue;
+        }
+
+        p::first-letter {
+            font-size: 3rem;
+            font-weight: bold;
+            float: left;
+            margin: 2px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background: red;">Cabeçalho</h1>
+    <!--As tags HTML podem receber um atributo style, esse atributo é escrito em CSS, neste caso a tag style é usada apenas nesta tag h1-->
+    <p>
+        <a href="https://developer.mozilla.org/pt-BR/" target="_blank"><img
+                src="https://logosandtypes.com/wp-content/uploads/2022/04/mdn.png" alt="Logo atual da MDN"
+                width="50"></a>
+    </p>
+    <p>
+        <b>L</b> <strong>ipsum</strong> <i>dolor</i> <em>sit</em> amet consectetur
+        adipisicing elit. <br>
+        Id recusandae
+        <a href="index.html" target="_blank">rerum</a>
+        <del>commodi,</del>
+        <ins>officia</ins>
+        <s>inventore</s>
+        <u>corrupti</u>
+        <small>dignissimos</small>
+        <q cite="https://en.wiktionary.org/wiki/ullam">ullam</q>,
+        itaque officiis nulla repellendus.
+
+    <div class="azul">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut modi quis esse nobis porro impedit labore
+        molestiae. Delectus maiores dolore nam exercitationem, itaque, cumque sapiente, eveniet ea ipsa quam molestiae.
+    </div>
+    <!--container generico não linear, ou seja, afeta os elementos em volta criando um paragrafo visual dentro do paragrafo-->
+
+    Laudantium, esse tempore exercitationem voluptatem magni
+    provident vero ipsum.
+    <br>
+    2<sup>2</sup>
+    H<sub>2</sub>O
+    <br>
+    <code>console.log</code>
+    </p>
+
+    <!--tag "b" deixa o texto em negrito. "strong" tambem, mas strong é semantinca, tem um significado, deixa o texto selecionado com mais importancia(não há diferença visual). "i" deixa o texto em italico. "em" dá enfase, visalmente igual ao "i", mas aplica-se a mesma situação do "b" e "strong". "a" é usado para atribuir um link ao texto selecionado, vem sempre acompanhado de "href", dentro do "href" pode estar um arquivo no mesmo servidor ou um link. "target" é um complemento do "a", no caso "target _blank" a hiperligação abre numa nova pagina, a tag "a tem varios atributos alem do target", "rel" é usado para informar o navegador a relação com a pagina vinculada na hiperligação."img" é usado para adicionar imagens em html, "scr" é usado para referir onde esta essa imagem, "alt" é o texto alternativo da imagem, não visual, o "width" e "height" não é tão utilizado atualment pois existe o CSS para isso. tambem é possivel criar link atraves de imagens. "del" e "s" risca o texto, sendo "del" a mais semantica e "s" a tag apenas visual. "ins" e "u" sublinha o texto, sendo "ins" a mais semantica e "u" a tag apenas visual. "small" diminiu ligeiramente o texto. "sup" é usado para "pontencia", sendo os caracteres selecionados aqueles que ficam na "posição de potencia. "sub" é basicamente o contrario de sup. "br" é usado para mudar de linha, não confundir com a "p", "p" cria um novo paragrafo onde será iincerido corpo dentro. "q" é usado para citações, pondo o texto dentro de aspas e indicando ao navegador que é uma citação, usando a tag "cite" em conjunto é possivel criar uma hiperligação associada a essa citação. "code" é usado para sitar codigo. Estas tags são usadas dentro de paragrafos.-->
+
+    <hr><!--cria uma linha de separação entre paragrafos-->
+
+    <blockquote cite="https://en.wiktionary.org/wiki/ullam">Bloco de citação</blockquote>
+    <!--usado de forma semelhante ao " q" mas fora de um paragrafo e dá um aspeto de sitação feita em jornal online, por esse motivo é possivel ter um paragrafo dentro de um "blockquote"-->
+
+    <pre>
+        <code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+// saída: Hello, World!
+        </code>
+    </pre>
+    <!--"pre" é uma tag de texto pre formatado, normalmente usada em conjuto com "code" para dispor o texto como é escrito no codigo-->
+
+    <p>
+        <span class="azul">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis error dicta reprehenderit temporibus maiores
+            quisquam at dolores cumque iusto animi explicabo molestiae ratione excepturi aut dolor earum eligendi,
+            ducimus harum?
+        </span><!--"span" é um container generico inline(não afeta os elementos proximos) apenas visual-->
+    </p>
+
+</body>
+
+</html>
+
+<!--certas tags têm tags filhos que so podem ser usadas com elas-->
