@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 573</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*"*" serve para selecionar todos os elementos da pagina*/
+        /* #heading {
+            background: blue;
+        }*/
+
+        #heading {
+            background: rgba(0, 0, 0, 0.7);
+            /*rgba, vermelho, verde, azul, alpha(opacidade)*/
+        }
+
+        #heading div {
+            width: 90%;
+            display: flex;
+            /* background: #e50914;*/
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        body {
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/f1c3c4eb-2fea-42c7-9ebd-1c093bd8a69d/c8820931-2dc0-4a91-bab7-c4a932423e53/PT-pt-20230403-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+            background-size: cover;
+            background-position: top center;
+        }
+
+        #heading .h1 {
+            /*padding-top: 15px;*/
+            /*padding-left: 15px;*/
+            /*padding-bottom: 15px;*/
+            padding: 15px o;
+            /*usando apenas "padding" podemos escolhero enchimento do elemento pela seguinte ordem top, direita, baixo, esquerda, no sentindo horario comensando pelo topo, como um relogio, se for tudo igual basta escrever uma vez, se escrever só dois valores, o priomeiro é em baixo e em cima, o segundo é das laterais*/
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+
+        /*seleciona todos os "h1" dentro do id escolhido*/
+
+        #heading a {
+            color: #fff;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        /*seleciona todos os "a" dentro do id escolhido*/
+    </style>
+</head>
+
+<body>
+    <!--<div style="width: 180px; height: 120px; background: red;">
+        <div style="width: 60px; height: 60px; background:yellow; float: left;"></div>
+        <div style="width: 60px; height: 60px; background:blue; float: left;"></div>
+        <div style="width: 60px; height: 60px; background:brown;float: left;"></div>
+        <div style="width: 120px; height: 60px; background:purple;float: left; text-align: center;">
+            <p style="width: 20px; height: 20px; background: darkcyan;">Qualquer coisa</p>
+        </div>
+        <div style="width: 60px; height: 60px; background:turquoise;float: left;"></div>
+    </div>
+    <br>
+    pagina tipo netflix-->
+
+    <header id="heading">
+        <div>
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+            <h2 class="h1">
+                <a href="#">Netflix</a>
+            </h2>
+        </div>
+    </header>
+</body>
+
+</html>

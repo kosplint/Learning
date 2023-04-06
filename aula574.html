@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 574</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*um pre-set simples que pode ser usado em todo o inicio de CSS*/
+
+
+        .section-one,
+        .section-tow {
+            box-sizing: border-box;
+            /*o tamanho do elemento todo fica limitado ao tamanho da borda, sendo o assim, o tamanhdo do elemento fica a soman dos tamanhos da borda, padding e do elemento em si*/
+        }
+
+        /*usando uma virgula é possivel configurar varios elementos*/
+
+        .section-one {
+            background: deeppink;
+            background-image: url(https://i0.wp.com/techbeasts.com/wp-content/uploads/2016/01/nature-wallpapers-hd.jpg);
+            background-size: cover;
+            background-position: center center;
+            /*centra o fundo*/
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-bottom-width: 10px;
+            border-bottom-color: firebrick;
+            border-bottom-style: solid;
+            border-style: solid;
+            border-width: 10px;
+            border-top-color: yellow;
+            border-right-color: green;
+            border-left-color: blue;
+            /*a borda adciona tamanho ao conteudo, a borda pode ser muito personalizada, desde tamanho de cada lado, cor, estilo, entre outras edições que não necessariamente envolves os seus lados, "solid" é um estilo na borda, é possivel configurar uma personalização da borda para todos os lados de uma só vez, mas é preciso ter atenção. é possivel usar estes recuros para padding e margem, não é o mais comun nem o mais aconelhavel*/
+            padding: 15px 0 0 0;
+            /*o padding basicamente limita o tamanho do conteudo, criando uma especie de margem entre a borda e o conteudo em si*/
+            margin: 20px;
+            /*a margem afasta os conteudo*/
+        }
+
+        .section-tow {
+            background: cyan;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            padding: 15px;
+            margin: 20px;
+            /*as margens de conteudos diferentes adjacentes não se somam, subrepoem-se*/
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section-one">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo et ratione, molestias, maxime voluptatibus non
+        totam iusto minima ut vitae doloribus exercitationem suscipit eius beatae quas. Mollitia earum consequatur modi!
+    </section>
+    <section class="section-tow">2
+
+    </section>
+</body>
+
+</html>
