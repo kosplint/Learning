@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 576</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .responsive-table {
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        /*assim, se a tabela for mais larga que o resto do site, apenas a tebla terá uma barra de scroll*/
+
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        /*usado para unir as bordas da tabela*/
+
+        table td,
+        table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table caption {
+            caption-side: top;
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        tfoot td,
+        table th {
+            background-color: #ddd;
+        }
+
+        tfoot td {
+            font-style: italic;
+        }
+
+        /*editar a descrição da tebela com o que foi aprendido noutras aulas*/
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <div class="responsive-table">
+        <table>
+            <caption>Uma descrição para a tabela</caption>
+            <!--usado para crira uma descrição ou titulo da tabela, tambem uma legenda, basta usar  css-->
+            <thead>
+                <tr>
+                    <th>
+                        Titulo 1
+                    </th>
+                    <th>
+                        Titulo 2
+                    </th>
+                    <th>
+                        Titulo 3
+                    </th>
+                </tr>
+            </thead><!--"thead" é usado para criar um cabeçalho dentro de uma tabela e tem de ter uma linha dentro-->
+            <tbody>
+                <tr>
+                    <td>
+                        Corpo 1
+                    </td>
+                    <td>
+                        Corpo 2
+                    </td>
+                    <td>
+                        Corpo 3
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2">
+                        <!--aqui esta celula ocupa o espaço de duas colulas e depois duas linhas-->
+                        AQUI
+                    </td>
+                    <td>
+                        Corpo 3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Corpo 3
+                    </td>
+                </tr>
+            </tbody><!--"tbody" é usado para criar o corpo da tabela, tambem leva linhas e colunas dentro dele-->
+            <tfoot>
+                <tr>
+                    <td>
+                        Rodapé 1
+                    </td>
+                    <td>
+                        Rodapé 2
+                    </td>
+                    <td>
+                        Rodapé 3
+                    </td>
+                </tr>
+            </tfoot><!--não é muito usado, mas dá sempre jeito-->
+        </table>
+        <!--"table" é usado para criar uma tabela. tabelas são compostas pr linhas "tr" e colunas "td"(usado no corpo) ou "th"(usado no cabeçalho)-->
+    </div>
+
+</body>
+
+</html>
