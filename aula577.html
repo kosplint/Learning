@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 577, 578, 579, 580</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form action="#" method="get" target="_blank" autocomplete="off">
+            <h1>Cabeçalho</h1>
+            <p>O formulario</p>
+
+            <fieldset>
+                <legend>Descrição</legend><!--descrição/titulo do furulario-->
+                <p>
+                    <input type="text"><!--cria e define qual o tipo de input-->
+                </p>
+            </fieldset><!--cria uma linha que delimita o formulario-->
+        </form>
+        <form>
+            <p> O Meu Formuláeio</p>
+            <p>
+                <label for="nome">
+                    Nome:
+                </label><!--é interessante usar "label" pois este é clicavel, e da forma que foi escrito, se clicar no texto vai direto para o input associado, é possivel associar o "label"  a um "input" desta forma ou simplesmente pondo o intup dentro do label, é interessante usar desta forma pois assim é possivel por o label e o input em linhas diferentes-->
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <!--normal mente um "input" tem um id, "name" é usado para backend, informar a base de dados o que o user inserio, "placeholder" é usado para ajudar o user mostrando uma mensagem dentro do input que desaparece assim que o user começa a escrever, "value" está presente em todos os inputs, provavelmente será uma variavel pois vai ser enviado para o servidor juntamente com o "name", não há necessidade de escrever o "valeu" no codigo pois por padrão já é o valor que o user insere ex: value="Alvaro Almeida". "required" indica o navegardor que este input é necessario e o proprio navegador mostra uma mensagem que diz que este campo é necessario preencher-->
+            </p>
+            <p>
+                <label for="dev">Sou um dev
+                    <input type="checkbox" id="dev" name="dev" checked>
+                    <!--este input é uma caixa de marcação, por isso mesmo não tem placeholder. "checked" marca a caixa sozinho.-->
+                </label>
+            </p>
+            <p>
+                Género:<br>
+                <label for="feminino">Feminino
+                    <input type="radio" id="feminino" name="genero" value="feminino">
+                </label>
+                <label for="masculino">Masculino
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                </label>
+                <label for="outro">Outro
+                    <input type="radio" id="outro" name="genero" value="outro">
+                </label>
+            </p>
+            <!--o input "radio" é semelhante à checkbox, a diferença é que apenas um valor pode ser marcado, para isso, todos os "radio" que forem do mesmo grupo precisam ter o mesmo valor no "name", assim o formulario envia como valor o name, no caso genero, e o valor selecionado, por isso neste caso é necessario usar a tag "value"-->
+            <p>
+                <label for="date">Data
+                    <input type="date" id="date" name="date" value="2023-04-07">
+                </label><!--"date" para data, podemos escrever o valor padrão com value que tambem cria um placeholder-->
+            </p>
+            <p>
+                <label for="datetime">Data e Horas
+                    <input type="datetime-local" id="datetime" name="datetime" value="2023-04-07T20:00">
+                </label><!--formato ligeiramente diferente do date-->
+            </p>
+            <p>
+                <label for="time">Horas
+                    <input type="time" id="time" name="time" value="20:00:01">
+                </label>
+            </p>
+            <p>
+                <label for="cor">Cor preferida
+                    <input type="color" id="cor" name="cor" value="#00ffff">
+                </label>
+            </p>
+            <p>
+                <label for="email">Seu email:
+                    <input type="email" id="email" name="email" required placeholder="email@email.com">
+                </label>
+            </p>
+            <p>
+                <label for="password">Password:
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </label>
+            </p>
+            <p>
+                <label for="file">Arquivo
+                    <input type="file" id="file" name="file" accept=".png, image/*" multiple>
+                </label><!--no tipo "file" usamos "accept" para definir que tipo de arquivos queremos aceitar, ex".png" só aceita arquivos .png, "image/*" só aceita arquivos de imagem, seja qual for a extensão, e por ai, "multiple" permite selecionar multipos arquivos-->
+            </p>
+            <p>
+                <label for="number">Número:
+                    <input type="number" id="number" name="number" placeholder="Escreva um número" min="1" max="10"
+                        step="0.5">
+                </label><!--é possivel controlar o minimo e maximo e de quantos em quantos ele salta-->
+            </p>
+            <p>
+                <label for="range">Volume:
+                    <input type="range" id="range" name="range" min="0" max="10" list="trickmarks">
+                    <datalist id="trickmarks">
+                        <option value="0" label="0"></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5" label="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10" label="10"></option>
+                    </datalist>
+                </label><!--é possivel criar maximo, minimo e salto assim como em numeros-->
+            </p>
+            <p>
+                <label for="url">Uma url:</label>
+                <input type="url" id="url" name="url" placeholder="URL">
+            </p>
+            <p>
+                <label for="search">Pesquisa:</label>
+                <input type="search" id="search" name="search" placeholder="Search">
+            </p>
+            <!--a diferença entre "url" e "search" além de semantica, no "search" aparece um "x" para eliminar a pesquisa-->
+            <p>
+                <label for="select">Selecione uma opção:</label>
+                <select id="select" name="select" multiple>
+                    <!--"multiple" permite selecionar varias opções com as teclas ctrl ou shift, tambem muda os aspecto padrão da caixa-->
+                    <option value="qualquer">Valor</option>
+                    <!--pode ser feito assim ou com (label="Valor") em que o Vlaor é o que o user vê enquanto que o "qualquer é o valor enviado" -->
+                    <optgroup label="Menor que 5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </optgroup><!--"optgroup" permite criar um grupo dentro do elemento "select"-->
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7" selected>7</option><!--com "selected" esta opcção já vem pré selecionada-->
+                    <option value="8" disabled>8</option>
+                    <!--com "disabled" a opção fica desativada, sendo assim impossivel ser selecionada, mesmo ela aparecendo-->
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><!--como select é possivel criar uma caixa de seleção de valor expansivel-->
+            </p>
+            <p>
+                <label for="textarea">Textarea:</textarea></label>
+                <textarea name="textarea" id="textarea" rows="4" cols="30">Exemplo de texto!</textarea>
+                <!--similar ao "input" pardão mas ao inves de ser so uma linha uma area de texto completo, se alguma coisa for escrita no corpo, aparece na pagina como parte do texto a ser escrito, com "rows" indico quantas linhas quero que sejam mostradas de uma vez, "cols" indica quantos caracteres podem ser mostrados por linha-->
+            </p>
+            <p>
+                <button type="submit"> Enviar</button><!--este butão submente as informações-->
+                <button type="reset">Reset</button><!--este butão resetar o furmolario para os valores padrão-->
+            </p>
+        </form>
+        <!--"form" é usado para criar um formulario, pode ter seções, agrupamentos, varias outras tags, apenas é proibido colocar um formulario dentro de outro formulario. "form" deve receber "action" que indica para onde sera enviada a infromação do formulario, "method" é algo mais avançado, "target" eu não entendi mas acho que ajuda a visualizar claramente que ele foi enviado, "autocomplete" preenche o formulario com coisas escritas antes-->
+    </section>
+</body>
+
+</html>
