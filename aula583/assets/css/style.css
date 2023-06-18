@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: initial;
+}
+
+/*usamos "*" para selecionar todos os elementos, normalmente é usado para eleminar a margem e o preenchimento de todos os elementos*/
+
+h1 {
+    color: darkblue;
+}
+
+/*usado para selecionar tags iguais*/
+
+body .caixa section h2,
+body .caixa section p {
+    color: red;
+
+}
+
+/*assim selecionamos de forma mais expecifica, indicando o caminho das tags, +e possivel selecionar mais do que 1 elemento, semparando-os atraves de uma virgula, a virgula pode tambem ser usada com ids e classes*/
+
+
+.color-purple {
+    color: purple;
+}
+
+.main-content h2.heading {
+    font-style: italic;
+}
+
+/*assim é possivel selecionar uma tag dentro de uma class especifica, esta combinação pode ser usada com ids, classes e tags de qualquer for ex: selecionar uma tag dentro dum id dentro duma class, colocando a tag antes do ".class" eu expecifico qual o elemento que quero selecionar, mesmo que existam varios elementos com a mesma class*/
+
+.pai {
+
+    color: yellow;
+}
+
+.pai,
+.filha {
+    margin-left: 10px;
+}
+
+.pai>.filha {
+    color: aqua;
+}
+
+.pai>.filha>.neta {
+    color: green;
+}
+
+
+/*escrevendo as classes separadas com um espaço eu seleciono a class dentro de outra class, por outro lado, se eu escrever tudo junto o navegador vai procurar o elemento com as varias classes descritas, como o ">" seleciono o elemento filho direto do elemento anterior, sendo que todos os outros a baixo não são selecionados eleminado as reticencias que aparecem caso passe com o mouse por cima, indicando assim que não é para ter qualquer coisa dentro do elemento, por isso mesmo, se tiver um elemento no meio do caminho selcionado (ex: no meio de filha e neta tenho um <spam>) não sera posssivel selecionar o elemento final, pois o filho direto não foi selecionado*/
