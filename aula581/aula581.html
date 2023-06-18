@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 581</title>
+
+    <style>
+        .caixa1 {
+            background-color: red;
+            height: 120px;
+            width: 120px;
+        }
+    </style>
+    <!--a tag style usada para "chamar" o CSS pode ser colocada em qualquer parte do codigo, mas por questões de semantica é comum ser usada dentro do "head"-->
+
+    <link rel="stylesheet" href="./assets/css/styles581.css">
+    <!--outra forma de chamar o CSS, no caso é a mais usada principalmente para arquivos grandes, todo o codigo do CSS fica escrito no documento referenciado, tornado os documentos mais leves e criando uma semantica, "./" para começar a procura dentro da propria pasta seguindo o caminho indicado, é possivel usar varios arquivos de css no mesmo arquivo html, mesmo assim é preferivel usar um unico arquivo pois o navegador faz apenas uma requisição de estilo-->
+</head>
+
+<body>
+    <div class="caixa1"></div>
+    <div style="background-color: blue;
+    height: 120px;
+    width: 120px;" class="caixa2"></div> <!--outra forma de "chamar" o CSS-->
+    <div class="caixa3"></div>
+</body>
+
+</html>
