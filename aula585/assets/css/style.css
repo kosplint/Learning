@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.um [meu-atributo~="valor1"] {
+    color: chocolate;
+}
+
+/*com o seletor "~" posso selecionar apenas um dos valores dentro do meu atributo*/
+.um [meu-atributo|="valor"] {
+    color: pink;
+}
+
+.um [meu-atributo|="valor1"] {
+    color: red;
+}
+
+/*o seletor "|" requer que a palavra escrita seja seguida de um "-", desde que esse valor seja o primeiro do atributo, com isso a cor das letras não mudou para vermelho neste caso*/
+
+.dois [meu-atributo^="valor1"] {
+    color: red;
+}
+
+/*o seletor "^" requer que o atributo comece com o valor selecionado, ele funciona mesmo que tenha apenas parte da palavra*/
+
+.dois [meu-atributo$="d"] {
+    color: blue;
+}
+
+/*o seletor "$" requer que o atributo termine com o valor selecionado*/
+
+.tres [meu-atributo*="b"] {
+    color: yellow;
+}
+
+/*com o seletor "*" o valor do atributo apenas precisa de conter o valor selecionado*/
