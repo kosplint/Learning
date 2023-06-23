@@ -1,0 +1,11 @@
+p:not(.meio) {
+    color: blue;
+}
+
+/*com o "not" eu seleciono todos os elementos escolhidos, menos aquele que tem a condição apresentada, neste caso eu seleciono todos os paragraos menos aquele que tem a class meio*/
+
+input:not(:checked)+p {
+    background: yellow;
+}
+
+/*neste caso o not é usado para mencionar o contrario da condição, no caso não selecionada, para funcionar ativamente, a condição entre () tem de ter ":" antes como se não tivesse lá o "not"*/
