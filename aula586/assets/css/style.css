@@ -1,0 +1,76 @@
+h1:hover {
+    background-color: blue;
+    text-decoration: underline;
+}
+
+/*com a pseudo-classe "hover" posso atribuir uma ação quando o mouse está em cima do elemento ou elementos selecionado*/
+
+h1 {
+    transition: all 1500ms ease-in-out;
+}
+
+/*com "transition" é possivel mudar uma propriedade, no caso cria uma trnasição para aquele elemento*/
+
+a {
+    color: darkorange;
+}
+
+a:visited {
+    color: firebrick;
+}
+
+a:link {
+    color: deeppink;
+}
+
+/*selecionando apenas "a" seleciono todos os links, selecionando "a:link" seleciono todos os links não visitados, selecionando "a:visited" seleciono todos os links visitados*/
+
+a:hover {
+    background: darkslateblue;
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    background: darkslategrey;
+    color: white;
+    text-decoration: none;
+}
+
+/*"a:active" é usado quando clicamos no link, enquanto estamos a clicar no link*/
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+/*"input:focus" é usado quando o input está em fouco, quando é selecionado, neste caso o input ficou com uma sombra e uma pequena borda preta*/
+
+input:disabled {
+    background-color: rebeccapurple;
+    cursor: not-allowed;
+}
+
+/*"input:disabled" seleciona os inputs desabilitados*/
+
+input:checked {
+    width: 50px;
+    height: 50px;
+}
+
+input:checked+p {
+    background: red;
+}
+
+/*selecionado o paragrafo a seguir ao input*/
+
+.pai .lista li:first-child {
+    background: blue;
+}
+
+.pai .lista li:last-child {
+    background: yellow;
+}
+
+/*aqui são selecionados os diferentes "filhos", caso o primeiro e o ultimo*/
