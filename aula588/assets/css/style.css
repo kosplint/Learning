@@ -1,0 +1,25 @@
+ul li:nth-child(even) {
+    background-color: rebeccapurple;
+}
+
+/*"nth-child" é usado para selecionar valores expecificos, neste caso seleciona apenas os numeros pares, mas pode ser usado para selecionar multiplos, numeros primos, entre outros*/
+
+
+ul li:nth-child(odd) {
+    background-color: darkturquoise;
+}
+
+/*neste caso seleciona os numeros não pares*/
+
+
+ul li:nth-child(3n) {
+    background-color: darkolivegreen;
+}
+
+ul li:nth-child(3n+5) {
+    background-color: darkred;
+}
+
+/*neste caso começa no 5º elemento e conta mais 3, para simpleficar a explicação*/
+
+/*esta pseudo-classe pode ser usada não apenas por listas mas por todos os elementos que sejam irmãos entre si*/
