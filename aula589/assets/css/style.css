@@ -1,0 +1,44 @@
+/*um pseudo-elemento comporta-se como um elemento normal, podendo ser editado como um elemento normal. nas pseudo-classes usamos ":", nos pseudo-elementos usamos "::", mas funciona apenas com ":" apesar de não ser correto. um pseudo elemento não fica fora do elemento selecionado, fica dentro, ele fica no caso antes ou depois do conteudo do elemento*/
+
+ul li::after {
+    content: "-";
+}
+
+/*com "after" adicionamos um elemento apos o elemento selecionado atraves de CSS, ou seja, um pseudo-elemento.*/
+
+ul li::marker {
+    content: none;
+}
+
+/*neste caso com "marker" tiro a marcação que o item de lista tem presente por padrão*/
+
+
+ul li::before {
+    content: "-";
+}
+
+p::first-letter {
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+/*neste caso selecionei a primeira letra do elemento, criando assim um elemento separado dos outros*/
+
+p::first-line {
+    background-color: red;
+}
+
+/*neste caso separei e selecionei a primeira linha toda*/
+
+p::selection {
+    background: black;
+    color: white;
+}
+
+::placeholder {
+    color: yellow;
+}
+
+/*no caso do placeholder não há necessidade de selecionar o elemento antes, apesar de ser mais adequado expecificar o elemento*/
