@@ -2,15 +2,43 @@
     display: block;
     background: blue;
     width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: padding-box;
+    border: 5px ridge black;
 }
 
-/*o display de uma div já é por padrão um block*/
+/*o display de uma div já é por padrão um block, com "max" e "min" seleciono o tamanho maximo e minimo da div*/
 
 .texto1 {
     display: block;
     background: red;
     width: 200px;
     height: 200px;
+    box-sizing: content-box;
+    border: 5px dotted black;
 }
 
-/*se o conteudo de uma div passar do tamanho da mesma, por padrão o navegador vai exticar o espaço da div, algo que pode ser resolvido com "overflow" ou "overflow-x/y"*/
+/*se o conteudo de uma div passar do tamanho da mesma, por padrão o navegador vai exticar o espaço da div, algo que pode ser resolvido com "overflow" ou "overflow-x/y", com "overflow: hidden" o conteudo é "escondido", corta no fim da div, usando x/y escolho o eixo, com "overflow-x/y: scroll" adiciono uma barra de scroll no eixo selecionado mas neste caso é preferivel usar "overflow-x/y: auto" que adiciona ou não a barra de scroll consuante a necessidade*/
+
+.texto3 {
+    display: block;
+    background-color: green;
+    max-width: 900px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 10px 5px 15px 1px;
+    box-sizing: border-box;
+    border: 5px inset black;
+}
+
+/*com "margin: 0 auto" a div é ajustada automaticamente à pagina na horizontal, o 0 normalmente aparece em conjuto, "padding" é configurado na seguinte ordem cima, direita, baixo, esquerda. é possivel ainda confurar os eixos usando apenas duas medidas, no caso x, y por esta ordem*/
+[class] {
+    overflow: auto;
+    margin: 0 0 5px 0;
+    padding: 20px;
+}
+
+/*não consigo deixar uma div do tamanho do navegador sem mexer no tamanho do "body" e do "html", mas mesmo configorando o tamanho do "body" e do "html" para 100% normalmente não costuma funcionar. normalment usamos atribuimos um tamanho ao padding dando assim uma borda ao conteudo, com o border consigo fazer uma moldura, configurei ainda a margin para que tenha apenas um espaçamento em baixo para que as divs nao fiquei "apoiadas" umas nas outras. por padrão o "box-sizing" vem configurado como "content-box", que isso dizer que quando trabalhamos diretamente com alturas e larguras, apenas afeta o conteudo do objeto, ou seja, margin, padding e border não são afetados, assim quando são configurados estes são adcionados ao conteudo, aumentando assim o aspeto visual do objeto na pagina, usando "box-sizing: padding-box" o "padding" passa a fazer parte do nosso conteudo, assim o tamanho total do conteudo é igual ao tamanho do conteudo em si + o tamanho do padding, apenas aumentando o tamanho do objeto a margin e a border, no caso da border afeta a borer e o padding, sendo assim, o tamanho final do conteudo neste caso é a soma do tamnho do conteudo em si, mais o tamanho do padding, mais o tamanho da border, a margin é sempre para fora do conteudo pois é usada para "empurrar" o conteudo criando uma assim margem. existem alguns estilos que podem ser configurados na border, é possivel ainda configuras as propriedades da border separadamente, o estilo mais comun é a borda lisa, solid*/
