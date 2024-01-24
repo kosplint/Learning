@@ -1,0 +1,13 @@
+#texto {
+    font-family: sans-serif;
+    color: red;
+    font-size: 30px;
+}
+
+/*existem varias propriedades que são herdadas de pais para filhos, como é o exemplo das propriedades a cima, os elementos filhos "p" e "h1" herdaram a font e a cor do elemento pai "body"*/
+
+p {
+    font-size: initial;
+}
+
+/*com "initial" a propriedade herdada é desativada, com "inherit" a propriedade herdada é ativada*/

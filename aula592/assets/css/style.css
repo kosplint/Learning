@@ -1,0 +1,16 @@
+.texto2 {
+    display: block;
+    background: blue;
+    width: 50%;
+}
+
+/*o display de uma div já é por padrão um block*/
+
+.texto1 {
+    display: block;
+    background: red;
+    width: 200px;
+    height: 200px;
+}
+
+/*se o conteudo de uma div passar do tamanho da mesma, por padrão o navegador vai exticar o espaço da div, algo que pode ser resolvido com "overflow" ou "overflow-x/y"*/

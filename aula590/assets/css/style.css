@@ -1,0 +1,180 @@
+/*Por ordem de especificidade ou preferencia:
+ID
+Classes, Atributos e pseudo-classes
+Elemenento e pseudo-elementos
+
+Metudo mais simples de entender
+
+ID      Classes, Atributos e pseudo-classes     Elemenento e pseudo-elementos
+0       0                                       1                               apenas especifiquei o elemento/pseudo
+0       1                                       0                               apenas especifiquei a class/atributo...
+0       1                                       1                               espeficiquei a Class e o Elemento
+1       0                                       0                               apenas esoecifiquei o ID
+1       0                                       1                               especifiquei o ID e o Elemento
+1       1                                       0                               especifiquei o ID e a Class
+1       1                                       1                               especifiquei tudo, ID, Class e Elemento
+Desta forma ficou a ordem de preferencia que o browser ira escolher
+
+a partir dessa ordem, a proxima ordem a ser seguida é a ordem  qual o codigo foi escrito, sendo que a ultima edição é a que pervalece
+*/
+
+p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: normal;
+    font-variant: small-caps;
+}
+
+.p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: italic;
+}
+
+p.p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 20px;
+}
+
+#p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+p#p {
+    background-color: black;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#p.p {
+    background-color: black;
+    color: blue;
+}
+
+p#p.p {
+    background-color: violet;
+}
+
+/*é possivel "burlar" a ordem preferencia, para isso basta escrever de forma mais espcifica, exemplo( para a classe a cima se subrepor ao id teria de escrever #p.p, e por ai em diante). Para usar o elemento junto com a class, com o id ou com os dois devo coloca-lo antes destes.Como visto em cima, mesmo o "1,1,1" sendo a ultima edição, é ela que pervalece sobre todas as outras e por ai adiante.*/
+/*Seguindo esta regra, se eu selecionar 2 id´s o "1,1,1" passa para "2,1,1", tornando-o mais especifico, se selecionar duas classes o "1,1,1" passa para "1,2,1", tornando-o mais especifico, se selecionar dois elementos o "1,1,1" passa para "1,1,2", tornando-o mais especifico, e por ai adiante, segue um exemplo*/
+
+div p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: normal;
+    font-variant: initial;
+}
+
+.div .p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: oblique;
+}
+
+div.div p.p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 10px;
+}
+
+#div #p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+}
+
+div#div p#p {
+    background-color: black;
+    color: yellow;
+    font-family: fantasy;
+}
+
+#div.div #p.p {
+    background-color: black;
+    color: magenta;
+}
+
+div#div.div p#p.p {
+    background-color: cornflowerblue;
+}
+
+/*quanto mais especifico mais dificia é subscrever. Adicionar um pseudo-elemento adiciona "0,0,+1", adicionar uma pseudo-class adiciona "0,+1,0". A tag/atributo "style" escrito em html sobrepoem todas as especificidades presentes em CSS. Outra forma de subscrever as especifidades é usando "!important" que é colocado dentro da linha de edição, na situação a baixo apenas a cor de fundo e a dor da letra é algo importante, subrepondo-se a todas as outras especificações*/
+
+div p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: normal;
+    font-variant: initial;
+}
+
+.div1 .p {
+    background-color: black !important;
+    color: yellow !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 0;
+    font-style: oblique;
+}
+
+div.div1 p.p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    padding: 10px;
+}
+
+#div #p {
+    background-color: black;
+    color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+}
+
+div#div p#p {
+    background-color: black;
+    color: yellow;
+    font-family: fantasy;
+}
+
+#div.div1 #p.p {
+    background-color: black;
+    color: magenta;
+}
+
+div#div.div1 p#p.p {
+    background-color: cornflowerblue;
+}
+
+/* resumidamente, qual a ordem de "escolha"?
+!important              <- usado em ultimo caso e nada recomendado, não é possivel subrepor
+Style                   <-uso não recomendado, pois é uma edição fora do CSS
+especificidade
+ordem de escrita, sendo o ultimo a que pervalece
+
+a especificidade é a mais recomendada de ser usada, sendo tambem recomendado usar as classes
+*/
