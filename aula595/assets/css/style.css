@@ -1,0 +1,92 @@
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+/*scroll-behavior: smooth permite que a rolagem seja mais suave*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Temos medidas absulutas e medidas relativas. as medidas absolutas são medidas que não são baseadas em nada. Unidades de medida absoluta não são afetadas pelas definições do navegador. por padrão a unidade de medida do navegador é uma unidade de medida relativa. As unidades de medida relativa funcionam baseadas noutra coisa, são afetadas por outra coisa*/
+
+.p1 {
+    font-size: 20px;
+}
+
+/*pixel (px) é uma unidade de medida absoluta, desta categoria de unidade de medida é praticamente a unica a ser usada*/
+
+.pai {
+    font-size: 40px;
+}
+
+.p2 {
+    font-size: 0.25em;
+}
+
+/*em é uma unidade de medida relativa, no caso a cima, 1em é igual ao tamanho do elemento pai (40px), 0.5em é metade do tamanho do elemento pai (20px), 2em é o dobro do tamanho do elemento pai (80px) e por ai adiante */
+
+.p3 {
+    font-size: 2rem;
+}
+
+/*rem é outra unidade de medida relativa, esta semelhante ao em mas em vez de ser relativa ao elemento pai, é relativa ao elemnto root(raiz), no caso ao documento htlm. rem é a unidade mais utilizada*/
+
+html {
+    font-size: 62.5%;
+}
+
+/*normalmente configuramos o tamanho do html em perdentagem relativa ao tamanho do navegador, como por padrão o navegador vem configurado para 16px, pomos o html a 62,5% ficando assim a font-size de 10px, a partir dai usamos o rem nos restantes elementos, ficando assim muito mais facil*/
+
+/*todas estas medidas podem ser usadas para altura e largura*/
+
+.area1 {
+    width: 100vw;
+    height: 100vh;
+    background: rebeccapurple;
+}
+
+/*VW é a unidade relativa à largura do viewport(tela visivel), 1vw é igual a 1% da largura do viewport. o mesmo acontece com vh que no caso é aplicado a altura do viewport(neste caso em especifico a div passou da altura do viewport pois a div em sim é do tamaho do viewport mas existem mais elementos na pagina alem da div em questao, por isso é usado em sites em que à medida que descemos na pagina aparecem novos elementos pois cada elemento ocupa uma pagina inteira)*/
+
+.area2 {
+    width: 100vw;
+    height: 100vh;
+    background: red;
+}
+
+
+.area3 {
+    width: 100vw;
+    height: 100vh;
+    background: turquoise;
+}
+
+.link1 a {
+    color: cyan;
+    font-size: 1.5rem;
+}
+
+.link .a {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.link {
+    font-size: 1.5rem;
+}
+
+.area1 .div {
+    background: yellowgreen;
+    width: 50%;
+    height: 50%;
+}
+
+/*a percentagem é uma unidade de medida relativa ao elemento pai*/
+
+p {
+    font-size: 2vmax;
+}
+
+/*vmin e vmax são medidas relativas ao viewport em que vmin e medida minima do viewport e vmax é a medida maxima do viewport. por exemplo: no smartphone o vmax é a altura enquanto o vmin é a largura, já numa tv o vmax é a largura enquanto o vmin é a altura*/
