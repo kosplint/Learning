@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col1 {
+    background: #000;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col2 {
+    background: #00F;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col3 {
+    background: #0F0;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col4 {
+    background: #F00;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col5 {
+    background: #FFF;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col6 {
+    background: #0FF;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col7 {
+    background: #F0F;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.col8 {
+    background: #FF0;
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+/*é possivel selecionar a cor escrevendo a a cor, usando o codigo hexadecimal da cor*/
+
+/*hexadecimal usa os seguintes caracteres: 0123456789ABCDEF(sendo esta a ordem de preto para branco).um codigo de cor hexadecimal começa sempre com "#" em CSS. no caso de ter caracteres repetidos posso escrever apenas 3, mas apenas no caso dos carateres se repetirem aos pares*/
+
+/*o codigo hexadecimal funciona da seguinte forma: o F representa o branco e o 0 representa o preto. Se usarmos um conjunto de 0 e dois conjuntos de F a escala de cores vai seguir a escala de cores da luz assim os 2 primeiros respectivos ao ciano, os 2 do meio representam o magenta e os 2 ultimos são o amarelo. Se usarmos um conjunto de F e dois conjuntos de 0 a escala de cores vair seguir a escala de cores primarias, assim os 2 primeiros respectivos ao vermelho, os 2 do meio representam o verde e os 2 ultimos são o azul*/
+
+.col9 {
+    background: rgb(205, 90, 0);
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+/*posso expecificar ainda mais a minha cor usando o codigo RGB em que os valores das cores vão de 0 a 255, sendo o 0 o preto e o 255 o branco*/
+
+/*nada disto é obrigatorio decorar, mas é bom ter este conhecimento*/
+
+.col10 {
+    background: rgba(30, 187, 79, 0.75);
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+/*o RGBA utiliza os esquema de cores do RGB mas o "A" representa a opacidade da cor, este valor pode ir de 0 a 1, sendo 0 nada opaco e 1 totalmente opaco(este valor pode conter casas decimais, repesentando assim a percentagem de opacidade). Pode ser representado em percentagem*/
+
+.col11 {
+    background: hsla(272, 99%, 40%, 75%);
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+/*O HSL funciona de forma semelhante ao RGB tendo tambem a variante HSLA, o H significa hue(tonalidade, a cor em si), S é a sturação e L significa light (brilho). H vai do 0 ao 355 e os restantes são representados em percentagens*/
