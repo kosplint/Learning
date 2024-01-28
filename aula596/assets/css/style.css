@@ -1,0 +1,31 @@
+p {
+    color: tomato;
+    background-color: black;
+}
+
+/*Propriedades de cor*/
+
+p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    direction: rtl;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: 70px;
+    text-shadow: 2px 2px 3px white;
+    text-transform: capitalize;
+}
+
+/*direction é usado para indicar a direção do texto rtl (right-to-left) e ltr (left-to-right)
+letter-spacing é usado para indicar o espaçamento entre as letras
+word-spacing é usado para configurar o espaçamento entre palavras
+line-height é a altura da linha
+text-align é o alinhamento do texto
+text-decoration é usado para decorar o texto, pode ser configurado mais de uma decoração
+text-indent é usado para indicar o espamento do inicio de paragrafo (neste caso configurou à direita porque a orientação está da direita para a esquerda
+text-shadow é usado para configurar a sombra do texto da seguinte forma: (pixes para a direita) (pixeis para baixo) (blur, esfomaçado) (cor da sombra), não é necessario usar todos os parametros
+text-transform é usado para "transformar" o texto, no caso as iniciais ficam todas em maiuscolas*/
