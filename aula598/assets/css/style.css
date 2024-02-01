@@ -1,0 +1,77 @@
+.a1 {
+    position: fixed;
+}
+
+.a2 {
+    left: 40px;
+    position: fixed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    padding: 15px;
+}
+
+
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+@media (max-width: 320px) {
+    .grid .col {
+        float: left;
+        width: 100%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+/*com @media podemos impor uma condição, subscrevendo assim o CSS antriormente escrito
+NOTA: apesar de estar a escrever o CSS pensado em desktop, o padrão é Mobile Frist, ou seja, escrever o CSS pensando no mobile e só depois escrever as condições para o padrão desktop
+é possivel selecionar o tipo de media, ex: tv, impressão, ecrãs em geral, pc etc...*/
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .grid .col {
+        float: left;
+        width: 50%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        float: left;
+        width: 33.33%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1201px) {
+    .grid .col {
+        float: left;
+        width: 25%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+/* @media é usado para alterar largura, altura, orientação e resolução*/
