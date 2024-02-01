@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+}
+
+.pai {
+    height: 300vh;
+}
+
+.filha1 {
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+    margin: 10px;
+    position: static;
+    top: 20px;
+    left: 20px;
+}
+
+/*top, left, bottom, right é relativo à pagina, vai distanciar a distancia indicada a partir do lado indicado, é possivel que seja negativo, assim o elemento fica fora da pagina, se todos os lados forem configurados para 0 o elemnto vai se exticar e preencher a pagina, não esquecer que a isto é adicionado o tamanho da margem
+position: por padrão é static, se quiseremos configurar a posição do elemento não nos é permitido
+relative o elemento comporta-se em relação aos elementos em volta*/
+
+.filha2 {
+    width: 300px;
+    height: 300px;
+    background-color: cyan;
+    margin: 10px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+/*position: absolute o elemento comporta-se como se mudasse de camada pois o elemento apenas responde aos limites do navegador tomando assim uma posiçao absoluta, um bom exemplo da utilização destra prorpiedade é no facebook quando abrimos uma foto, o fundo fica escorecido pq basicamente é usado uma div cinza que ocupa a pagina toda na posição absoluta*/
+
+.filha4 {
+    width: 300px;
+    height: 300px;
+    top: 150px;
+    left: 150px;
+    position: absolute;
+    background-color: blue;
+    z-index: 1;
+}
+
+/*z-index é usado para indicar em que camada o elemento está, sendo que quanto menor o numero, mais a tras o elemento fica.
+nota: o elemento não pode estar na posição estatica
+se o valor do z-index for negativo, o elemento fica na camada atras dos elementos sem camada ou em posição estatica(estes ultimos elementos é como se estivessem na camada 0)*/
+
+.filha5 {
+    width: 300px;
+    height: 300px;
+    background-color: yellowgreen;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/*a posição relative é relativa ao navegador*/
+
+.outra {
+    position: absolute;
+    font-size: 50px;
+    background-color: aliceblue;
+    top: 50px;
+    left: 110px;
+}
+
+/*na posição absolute é uma exceção, no caso do elemento com posição absolute estar dentro de outro elemento, ele respeita a posição do elemento pai e a sua posição é relativa ao elemento pai*/
+
+.filha3 {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 3;
+}
+
+/*na posição fixed, o elemento fica fixo na pagina mesmo que esta role/scroll, essa é a unica diferença para a posição absolute*/
+
+ul {
+    height: 100px;
+    overflow-y: auto;
+}
+
+ul li.sticky {
+    position: sticky;
+    background-color: bisque;
+    top: 0;
+}
+
+/*com position sticky o meu elemeto fica fixado até encontrar outro elemento sticky*/
