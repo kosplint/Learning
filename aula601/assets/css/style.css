@@ -1,0 +1,151 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+}
+
+.menu ul {
+    list-style: none;
+    color: aliceblue;
+    display: block;
+    padding: 0px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu a {
+    color: aliceblue;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #333;
+}
+
+
+.grid {
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 73px;
+}
+
+
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+}
+
+/*com "box-shadow" crio uma sombra na "caixa". os 2 primeiros valores são horizontal e vertical respetivamente. o terceiro valor seria o tamanho do efeito blur. o quarto valor é o quanto a sombra se espalha. no fim escolhemos a cor da sombra. é possivel dazer mais do que uma sombra no mesmo elemento. usando "inset" a sombra passa para dentro do elemento*/
+
+.grid .col-content:hover {
+    box-shadow: 10px -10px 5px 5px #333;
+}
+
+.pag1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pag1 .grid .col-content {
+    background: red;
+}
+
+.pag2 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pag2 .grid .col-content {
+    background: blue;
+}
+
+.pag3 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pag3 .grid .col-content {
+    background: salmon;
+}
+
+.full-page {
+    padding: 0 30px;
+    max-width: 100%;
+    padding-top: 73px;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+    .grid .col {
+        float: left;
+        width: 100%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .grid .col {
+        float: left;
+        width: 50%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        float: left;
+        width: 33.33%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
+
+@media (min-width: 1201px) {
+    .grid .col {
+        float: left;
+        width: 25%;
+        height: 300px;
+        padding: 15px;
+    }
+
+}
